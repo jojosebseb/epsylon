@@ -85,4 +85,4 @@ $('#indexSection-2').waypoint(function() {
         })
     });
     $('#indexSection-2').removeClass('entry');
-},{offset: '50%'});
+},{offset: '70%'});
