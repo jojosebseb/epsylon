@@ -409,11 +409,17 @@ ul.slick-dots button {
 #indexSection-2 .flex .flex-module {
   width: 45%;
   padding: 10px;
+  height: 100px;
+  position: relative;
 }
 
 #indexSection-2 .flex .flex-module img {
-  width: 100%;
+  width: 120px;
   display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #indexSection-3 .slick-dots {
@@ -557,8 +563,10 @@ ul.slick-dots button {
 
 #moduleBelt {
   background: #333;
-  padding: 80px 0 130px;
+  padding: 80px 0 80px;
   background-image: url("../img/dummy/dummy-7.png");
+  background-position: center center;
+  background-size: cover;
   color: white;
 }
 
@@ -568,16 +576,18 @@ ul.slick-dots button {
 
 #moduleBelt .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 #moduleBelt .flex-module {
-  width: 50px;
-  height: 50px;
+  width: 23vw;
+  height: 23vw;
   position: relative;
   background: white;
   border-radius: 5px;
   transition: all .3s ease;
+  margin: 0 1vw 50px;
 }
 
 #moduleBelt .flex-module img {
@@ -586,7 +596,7 @@ ul.slick-dots button {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all .3s ease;
-  width: 20px;
+  width: 8vw;
 }
 
 #moduleBelt .flex-module .desc {
@@ -641,7 +651,6 @@ ul.slick-dots button {
 #featureBelt .flex .flex-module img {
   display: block;
   margin: 20px auto;
-  filter: grayscale(1);
   transition: all .3s ease;
   width: 80px;
 }
@@ -663,7 +672,7 @@ ul.slick-dots button {
   width: 100%;
   position: relative;
   transition: all .3s ease;
-  padding: 10px;
+  padding: 30px 50px;
 }
 
 #conceptBelt .title {
@@ -675,6 +684,7 @@ ul.slick-dots button {
   text-align: left;
   color: white;
   font-size: 40px;
+  align-items: center;
 }
 
 #conceptBelt .flex-center img {
@@ -765,13 +775,13 @@ ul.slick-dots button {
 }
 
 #mainBelt .w60 {
-  padding-bottom: 40px;
+  padding: 20px 5vw 0;
 }
 
 #mainBelt .container {
   display: flex;
   align-items: center;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
 }
 
 #mainBelt .container img {
@@ -826,14 +836,15 @@ ul.slick-dots button {
 
 #clientSection-1 {
   font-family: ClearSansReg;
-  padding: 80px 0;
+  padding: 20px 0 80px;
   border-bottom: 1px solid #eee;
   text-align: center;
 }
 
 #clientSection-1 img {
   display: block;
-  width: 100%;
+  width: 75%;
+  margin: auto;
 }
 
 #clientSection-1 .container {
@@ -895,10 +906,11 @@ ul.slick-dots button {
   background: white;
   color: black;
   font-family: ClearSansReg;
-  width: 49%;
+  width: 80%;
   padding: 20px 15px;
   border-radius: 10px;
   margin-bottom: 10px;
+  margin: 10px 10%;
 }
 
 #supportBanner .flex .flex-module .image-box {
@@ -979,7 +991,7 @@ ul.slick-dots button {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7222ff', endColorstr='#4fc5fe',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
-  padding: 150px 0 80px;
+  padding: 70px 0 40px;
   color: white;
   text-align: center;
 }
@@ -989,17 +1001,17 @@ ul.slick-dots button {
 }
 
 #aboutSection-1 {
-  padding: 50px 0;
+  padding: 20px 0 40px;
 }
 
 #aboutSection-1 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   align-items: center;
 }
 
 #aboutSection-1 .w40 {
-  padding: 0 20%;
+  padding: 20px 20% 0;
 }
 
 #aboutSection-1 .w40 img {

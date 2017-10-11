@@ -375,9 +375,15 @@ ul.slick-dots{
         .flex-module{
             width: 45%;
             padding: 10px;
+            height: 100px;
+            position: relative;
             img{
-                width: 100%;
+                width: 120px;
                 display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -502,30 +508,34 @@ ul.slick-dots{
 }
 #moduleBelt{
     background: #333;
-    padding: 80px 0 130px;
+    padding: 80px 0 80px;
     background-image: url('../img/dummy/dummy-7.png');
+    background-position: center center;
+    background-size: cover;
     color: white;
     .section-title{
         padding: 0px 0 30px;
     }
     .container{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
     .flex-module{
-        width: 50px;
-        height: 50px;
+        width: 23vw;
+        height: 23vw;
         position: relative;
         background: white;
         border-radius: 5px;
         transition: all .3s ease;
+        margin: 0 1vw 50px;
         img{
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             transition: all .3s ease;
-            width: 20px;
+            width: 8vw;
         }
         .desc{
             position: absolute;
@@ -571,7 +581,7 @@ ul.slick-dots{
             img{
                 display: block;
                 margin: 20px auto;
-                filter: grayscale(1);
+                // filter: grayscale(1);
                 transition: all .3s ease;
                 width: 80px;
             }
@@ -598,7 +608,7 @@ ul.slick-dots{
         width: 100%;
         position: relative;
         transition: all .3s ease;
-        padding: 10px;
+        padding: 30px 50px;
     }
     .title{
         margin: 0;
@@ -612,6 +622,7 @@ ul.slick-dots{
         text-align: left;
         color: white;
         font-size: 40px;
+        align-items: center;
         img{
             // width: 100px;
             height: 80px;
@@ -676,12 +687,12 @@ ul.slick-dots{
         padding: 20px 100px;
     }
     .w60{
-        padding-bottom: 40px;
+        padding: 20px 5vw 0;
     }
     .container{
         display: flex;
         align-items: center;
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap;
         img{
             max-width: 100%;
         }
@@ -730,12 +741,13 @@ ul.slick-dots{
 }
 #clientSection-1{
     font-family: ClearSansReg;
-    padding: 80px 0;
+    padding: 20px 0 80px;
     border-bottom: 1px solid #eee;
     text-align: center;
     img{
         display: block;
-        width: 100%;
+        width: 75%;
+        margin: auto;
     }
     .paragraph{
         // padding-right: 50px;
@@ -787,10 +799,11 @@ ul.slick-dots{
             background: white;
             color: black;
             font-family: ClearSansReg;
-            width: 49%;
+            width: 80%;
             padding: 20px 15px;
             border-radius: 10px;
             margin-bottom: 10px;
+            margin: 10px 10%;
             .image-box{
                 width: 100%;
                 margin: auto;
@@ -859,7 +872,7 @@ ul.slick-dots{
     background: -webkit-linear-gradient(-45deg, rgba(114,34,255,1) 0%,rgba(79,197,254,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, rgba(114,34,255,1) 0%,rgba(79,197,254,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7222ff', endColorstr='#4fc5fe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    padding: 150px 0 80px;
+    padding: 70px 0 40px;
     color: white;
     text-align: center;
     .title{
@@ -867,14 +880,14 @@ ul.slick-dots{
     }
 }
 #aboutSection-1{
-    padding: 50px 0;
+    padding: 20px 0 40px;
     .container{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         align-items: center;
     }
     .w40{
-        padding: 0 20%;
+        padding: 20px 20% 0;
         img{
             width: 100%;
         }

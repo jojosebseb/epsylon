@@ -297,7 +297,7 @@ ul.slick-dots{
     opacity: 0.9;
     font-size: 27px;
     font-family: ClearSansReg;
-
+    transition: all 1.3s ease;
 }
 #indexSection-1{
     font-family: ClearSansBold;
@@ -410,15 +410,24 @@ ul.slick-dots{
         display: flex;
         justify-content: space-between;
         padding: 40px 0;
+        align-items: center;
         .flex-module{
-            width: 12%;
+            width: 200px;
             transition: all .3s ease;
             opacity: 1;
             left: 0;
             position: relative;
+            height: 100px;
+            outline: none;
+            margin: 0 10px;
             img{
-                width: 100%;
+                width: 100px;
                 display: block;
+                margin: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -449,6 +458,7 @@ ul.slick-dots{
         text-align: center;
         font-family: QuicksandReg;
         margin: 0 30px;
+        outline: none;
         .avatar-box{
             border-radius: 50%;
             overflow: hidden;
@@ -560,14 +570,16 @@ ul.slick-dots{
         height: 90px;
         position: relative;
         background: white;
+        left: 0;
         border-radius: 5px;
-        transition: all .3s ease;
+        transition: all 1.3s ease;
         img{
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) scale(0.85);
             transition: all .3s ease;
+            filter: grayscale(1);
         }
         .desc{
             position: absolute;
@@ -584,13 +596,19 @@ ul.slick-dots{
         transform: scale(1.1);
         img{
             transform: translate(-50%, -50%) scale(0.9);
+            filter: grayscale(0);
         }
         .desc{
             transform: translateY(-5px) scale(0.9);
         }
     }
 }
-
+#moduleBelt.entry{
+    .flex-module{
+        left: 50px;
+        opacity: 0;
+    }
+}
 #featureBelt{
     padding: 50px;
     font-family: ClearSansReg;
@@ -608,6 +626,10 @@ ul.slick-dots{
             font-size: 14px;
             cursor: pointer;
             line-height: 18px;
+            position: relative;
+            top: 0;
+            left: 0;
+            opacity: 1;
             img{
                 display: block;
                 margin: 20px auto;
@@ -623,7 +645,14 @@ ul.slick-dots{
     }
 
 }
-
+#featureBelt.entry{
+    .flex-module{
+        // top: 50px;
+        left: -30px;
+        opacity: 0;
+        // transform: scale(.25)
+    }
+}
 #conceptBelt{
     display: flex;
     font-family: ClearSansReg;
@@ -632,6 +661,7 @@ ul.slick-dots{
     height: 350px;
     margin-bottom: 40px;
     .flex-module{
+        left: 0;
         height: 330px;
         width: 33.4%;
         position: relative;
@@ -685,6 +715,18 @@ ul.slick-dots{
         height: 350px;
     }
 }
+#conceptBelt.entry{
+    .flex-module{
+        top: 50px;
+        opacity: 0;
+        // height: 120px;
+    }
+}
+.entry{
+    .section-title{
+        opacity: 0;
+    }
+}
 .w70{
     width: 70%;
 }
@@ -715,6 +757,7 @@ ul.slick-dots{
         align-items: center;
         font-size: 40px;
         color: rgba(0,0,0,0.6);
+        transition: all .5s ease .1s;
         img{
             display: block;
             padding-right: 10px;
@@ -733,6 +776,7 @@ ul.slick-dots{
         padding: 40px 0;
         font-family: QuicksandReg;
         color: rgba(0,0,0,0.8);
+        transition: all .5s ease .2s;
         .highlight{
             font-family: QuicksandBold;
             color: #9bc15f;
@@ -741,9 +785,30 @@ ul.slick-dots{
     .bottom{
         font-family: ClearSansReg;
         margin-bottom: 100px;
+        transition: all .5s ease .3s;
+    }
+    .w40{
+        img{
+            transition: all .8s ease;
+        }
+    }
+    .top, .middle, .bottom{
+        top: 0;
+        position: relative;
     }
 }
-
+#mainBelt.entry{
+    .top, .middle, .bottom{
+        top: 50px;
+        opacity: 0;
+    }
+    .w40{
+        img{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+    }
+}
 #clientBanner{
     padding-top: 100px;
     min-height: 50vh;
@@ -782,7 +847,6 @@ ul.slick-dots{
     background: -webkit-linear-gradient(-45deg, rgba(75,168,142,1) 0%,rgba(57,173,221,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, rgba(75,168,142,1) 0%,rgba(57,173,221,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4ba88e', endColorstr='#39addd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
     min-height: 400px;
     padding-top: 150px;
     color: white;
@@ -791,6 +855,8 @@ ul.slick-dots{
         margin: auto;
         .section-title{
             padding-bottom: 10px;
+            position: relative;
+            top: 0;
         }
         .subcaption{
             font-size: 15px;
@@ -807,6 +873,10 @@ ul.slick-dots{
             width: 23%;
             padding: 20px 15px;
             border-radius: 10px;
+            transition: all .3s ease;
+            position: relative;
+            left: 0;
+            top: 0;
             .image-box{
                 width: 100%;
                 margin: auto;
@@ -821,7 +891,15 @@ ul.slick-dots{
         }
     }
 }
-
+#supportBanner.entry{
+    .section-title{
+        top: 5px;
+    }
+    .flex-module{
+        opacity: 0;
+        left: 50px;
+    }
+}
 .dropdown-parent{
     padding: 10px 0 0;
     max-height: 50px;
@@ -875,7 +953,7 @@ ul.slick-dots{
     background: -webkit-linear-gradient(-45deg, rgba(114,34,255,1) 0%,rgba(79,197,254,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, rgba(114,34,255,1) 0%,rgba(79,197,254,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7222ff', endColorstr='#4fc5fe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    padding: 150px 0 80px;
+    padding: 130px 0 80px;
     color: white;
     .title{
         text-transform: uppercase;
@@ -883,6 +961,7 @@ ul.slick-dots{
 }
 #aboutSection-1{
     padding: 50px 0;
+
     .container{
         display: flex;
         align-items: center;
@@ -890,7 +969,23 @@ ul.slick-dots{
     .w60{
         padding-left: 40px;
     }
+    img{
+        transition: all .5s ease 0s;
+        top: 0;
+        position: relative;
+    }
+    .paragraph{
+        transition: all .5s ease .3s;
+        top: 0;
+        position: relative;
+    }
+}
+#aboutSection-1.entry{
 
+    .paragraph, img{
+        opacity: 0;
+        top: 50px;
+    }
 }
 #aboutSection-2{
     padding: 50px 0 70px;
