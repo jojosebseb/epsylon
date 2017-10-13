@@ -160,6 +160,31 @@ $('#aboutSection-3').waypoint(function() {
     $('#aboutSection-3').removeClass('entry');
 },{offset: '70%'});
 
+$('#contactSection').waypoint(function() {
+    $('#contactSection').removeClass('entry');
+    $('#contactSection div').each(function(i){
+        $(this).css({
+            'transition-delay': i/5+'s'
+        })
+    });
+    $('#contactSection .form-input').each(function(i){
+        $(this).css({
+            'transition-delay': ((i/5)+1)+'s'
+        })
+    });
+},{offset: '70%'});
+
+$('#clientSection-1').waypoint(function() {
+    $('#clientSection-1').removeClass('entry');
+    $('#clientSection-1 div').each(function(i){
+        $(this).css({
+            'transition-delay': i/10+'s'
+        })
+    });
+},{offset: '70%'});
+
+
+
 $('#indexSection-2 .flex').slick({
   dots: true,
   arrows: false,

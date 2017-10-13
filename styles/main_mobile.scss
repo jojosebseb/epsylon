@@ -280,6 +280,25 @@ ul.slick-dots{
         }
     }
 }
+#indexSlider.entry{
+    // opacity: 0;
+    .slide-items{
+        position: relative;
+        height: 45vw;
+        background: #5cc9b9;
+        img{
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 1.5s ease .3s;
+        }
+        .text-container{
+            position: relative;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all .5s ease .1s;
+        }
+    }
+}
 .gradient-title{
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#87d7c8+1,4abdd9+100 */
     background: rgb(135,215,200); /* Old browsers */
@@ -315,10 +334,27 @@ ul.slick-dots{
     padding: 20px 0;
     margin: 20px 0;
 }
+#indexSection-1.entry{
+    .gradient-title{
+        position: relative;
+        top: 50px;
+        opacity: 0;
+        transition: all .5s ease;
+    }
+    .subcaption{
+        position: relative;
+        top: 50px;
+        transition: all .5s ease .2s;
+        opacity: 0;
+    }
+}
 .title{
     font-size: 24px;
     font-family: AkrobatBold;
     margin: 10px 0;
+}
+.slick-slide{
+    outline: none;
 }
 #indexProductHighlight{
     background: #f3f3f3;
@@ -333,6 +369,7 @@ ul.slick-dots{
             width: 50%;
             text-align: center;
             padding: 0px 20px 30px;
+            transition: all .3s ease;
             .image-box{
                 width: 100%;
                 img{
@@ -363,6 +400,12 @@ ul.slick-dots{
 
             }
         }
+    }
+}
+#indexProductHighlight.entry{
+    .product-module{
+        left: 100px;
+        opacity: 0;
     }
 }
 #indexSection-2{
@@ -744,6 +787,10 @@ ul.slick-dots{
     padding: 20px 0 80px;
     border-bottom: 1px solid #eee;
     text-align: center;
+    div{
+        top: 0;
+        position: relative;
+    }
     img{
         display: block;
         width: 75%;
@@ -977,4 +1024,119 @@ ul.slick-dots{
             }
         }
     }
+}
+
+#contactSection{
+    min-height: 80vh;
+    background-image: url('../img/dummy/contact-dummy.png');
+    padding: 15vh 0;
+    color: white;
+    font-family: ClearSansReg;
+    .subcaption{
+        // width: 60%;
+        margin: auto;
+    }
+    .contact-form{
+        background: white;
+        color: black;
+        margin: 30px auto;
+        border-radius: 10px;
+        padding: 20px 20px;
+        text-align: left;
+        // width: 90%;
+        position: relative;
+        transition: all .5s ease;
+        top: 0;
+        .subcaption{
+            text-align: left;
+            width: 100%;
+        }
+        .section-title{
+            text-align: left;
+        }
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        form{
+            padding: 20px 0;
+        }
+    }
+    .section-title{
+        transition: all .5s ease .3s;
+        position: relative;
+        top: 0px;
+    }
+    .subcaption{
+        transition: all .5s ease .1s;
+        position: relative;
+        top: 0px;
+    }
+    .gradient-button{
+        top: 0px;
+        position: relative;
+        opacity: 1;
+        transition: all .5s ease 2s;
+    }
+    .form-input{
+        top: 0px;
+        position: relative;
+        opacity: 1;
+        transition: all .5s ease .2s;
+    }
+}
+
+#contactSection.entry{
+    .section-title, .subcaption{
+        top: 50px;
+        opacity: 0;
+    }
+    .contact-form{
+        top: 100px;
+        opacity: 0;
+    }
+    .gradient-button, .form-input{
+        opacity: 0;
+        top: 30px;
+    }
+}
+.form-input{
+    padding: 10px 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    font-family: ClearSansReg;
+    font-size: 14px;
+}
+.border-input{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.half-input{
+    width: 100%;
+}
+.full-input{
+    width: 100%;
+}
+.gradient-button{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7bd1f2+1,79cab5+100 */
+    background: rgb(123,209,242); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(123,209,242,1) 1%, rgba(121,202,181,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(123,209,242,1) 1%,rgba(121,202,181,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(123,209,242,1) 1%,rgba(121,202,181,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7bd1f2', endColorstr='#79cab5',GradientType=1 ); /* IE6-9 */
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    width: 100%;
+    border-radius: 30px;
+    display: block;
+    width: 80%;
+    margin: 20px auto 0;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: 1px;
+    font-family: ClearSansBold;
 }

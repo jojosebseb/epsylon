@@ -512,6 +512,8 @@ ul.slick-dots button {
 #indexSection-3 .slide-module .avatar-box {
   border-radius: 50%;
   overflow: hidden;
+  border: 3px solid transparent;
+  transition: all .3s ease;
 }
 
 #indexSection-3 .slide-module .avatar-box img {
@@ -942,6 +944,18 @@ ul.slick-dots button {
   align-items: center;
 }
 
+#clientSection-1 * {
+  transition: all .5s ease;
+  top: 0;
+  opacity: 1;
+  position: relative;
+}
+
+#clientSection-1.entry * {
+  opacity: 0;
+  top: 50px;
+}
+
 .p-title {
   font-family: ClearSansBold;
   font-size: 30px;
@@ -1210,4 +1224,144 @@ ul.slick-dots button {
   font-size: 14px;
   opacity: 0.6;
   margin-bottom: 10px;
+}
+
+#contactSection {
+  min-height: 80vh;
+  background-image: url("../img/dummy/contact-dummy.png");
+  padding: 20vh 0;
+  color: white;
+  font-family: ClearSansReg;
+}
+
+#contactSection .subcaption {
+  width: 60%;
+  margin: auto;
+}
+
+#contactSection .contact-form {
+  background: white;
+  color: black;
+  margin: 30px auto;
+  border-radius: 10px;
+  padding: 30px 40px;
+  text-align: left;
+  width: 60%;
+  position: relative;
+  transition: all .5s ease;
+  top: 0;
+}
+
+#contactSection .contact-form .subcaption {
+  text-align: left;
+  width: 100%;
+}
+
+#contactSection .contact-form .section-title {
+  text-align: left;
+}
+
+#contactSection .contact-form .flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#contactSection .contact-form form {
+  padding: 20px 0;
+}
+
+#contactSection .section-title {
+  transition: all .5s ease .3s;
+  position: relative;
+  top: 0px;
+}
+
+#contactSection .subcaption {
+  transition: all .5s ease .1s;
+  position: relative;
+  top: 0px;
+}
+
+#contactSection .gradient-button {
+  top: 0px;
+  position: relative;
+  opacity: 1;
+  transition: all .5s ease 2s;
+}
+
+#contactSection .form-input {
+  top: 0px;
+  position: relative;
+  opacity: 1;
+  transition: all .5s ease .2s;
+}
+
+#contactSection.entry .section-title, #contactSection.entry .subcaption {
+  top: 50px;
+  opacity: 0;
+}
+
+#contactSection.entry .contact-form {
+  top: 100px;
+  opacity: 0;
+}
+
+#contactSection.entry .gradient-button, #contactSection.entry .form-input {
+  opacity: 0;
+  top: 30px;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.form-input {
+  padding: 10px 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  font-family: ClearSansReg;
+  font-size: 14px;
+}
+
+.border-input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.half-input {
+  width: 48%;
+}
+
+.full-input {
+  width: 100%;
+}
+
+.gradient-button {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7bd1f2+1,79cab5+100 */
+  background: #7bd1f2;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #7bd1f2 1%, #79cab5 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #7bd1f2 1%, #79cab5 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #7bd1f2 1%, #79cab5 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7bd1f2', endColorstr='#79cab5',GradientType=1 );
+  /* IE6-9 */
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  width: 100%;
+  border-radius: 30px;
+  display: block;
+  width: 60%;
+  margin: 20px auto 0;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 1px;
+  font-family: ClearSansBold;
 }
