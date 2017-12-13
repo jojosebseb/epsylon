@@ -930,6 +930,10 @@ ul.slick-dots button {
   color: white;
 }
 
+#supportBanner .dropdown-parent {
+  display: none;
+}
+
 #supportBanner .group {
   width: 60%;
   margin: auto;
@@ -1213,7 +1217,7 @@ ul.slick-dots button {
   top: 0px;
 }
 
-#contactSection .gradient-button {
+#contactSection .gradient-button, #contactSection #supportBanner .request-button, #supportBanner #contactSection .request-button {
   top: 0px;
   position: relative;
   opacity: 1;
@@ -1237,7 +1241,7 @@ ul.slick-dots button {
   opacity: 0;
 }
 
-#contactSection.entry .gradient-button, #contactSection.entry .form-input {
+#contactSection.entry .gradient-button, #contactSection.entry #supportBanner .request-button, #supportBanner #contactSection.entry .request-button, #contactSection.entry .form-input {
   opacity: 0;
   top: 30px;
 }
@@ -1265,7 +1269,7 @@ ul.slick-dots button {
   width: 100%;
 }
 
-.gradient-button {
+.gradient-button, #supportBanner .request-button {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7bd1f2+1,79cab5+100 */
   background: #7bd1f2;
   /* Old browsers */

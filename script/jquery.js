@@ -65,7 +65,7 @@ setTimeout(function(){
 
 $('#indexSection-1').waypoint(function() {
     $('#indexSection-1').removeClass('entry');
-},{offset: '50%'});
+},{offset: '90%'});
 
 $('#indexProductHighlight').waypoint(function() {
     $('.product-module').each(function(i){

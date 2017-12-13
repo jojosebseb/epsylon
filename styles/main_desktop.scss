@@ -170,7 +170,7 @@ ul.slick-dots{
     }
     .slide-items{
         position: relative;
-        height: 45vw;
+        height: 35vw;
         background: #5cc9b9;
         img{
             opacity: 0;
@@ -208,7 +208,7 @@ ul.slick-dots{
         }
         img{
             position: absolute;
-            bottom: -5vw;
+            bottom: -20vw;
             left: 0;
         }
     }
@@ -227,7 +227,7 @@ ul.slick-dots{
         }
         img{
             position: absolute;
-            bottom: -5vw;
+            bottom: -20vw;
             left: 0;
         }
     }
@@ -246,7 +246,7 @@ ul.slick-dots{
         }
         img{
             position: absolute;
-            bottom: -5vw;
+            bottom: -20vw;
             left: 0;
         }
     }
@@ -288,8 +288,8 @@ ul.slick-dots{
 }
 .subcaption{
     text-align: center;
-    opacity: 0.7;
-    font-size: 17px;
+    opacity: 0.85;
+    font-size: 16px;
     font-family: ClearSansReg;
 }
 .section-title{
@@ -316,6 +316,22 @@ ul.slick-dots{
         opacity: 1;
         transition: all .5s ease .2s;
     }
+    .flex{
+        display: flex;
+        .flex-module{
+            width: 25%;
+            padding: 50px 20px 0;
+        }
+        .caption{
+            padding: 10px 0;
+            text-transform: uppercase;
+        }
+        .cap-desc{
+            font-family: ClearSansBold;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+    }
 }
 #indexSection-1.entry{
     .gradient-title{
@@ -331,13 +347,86 @@ ul.slick-dots{
         opacity: 0;
     }
 }
+#indexSection-1a{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5ecbb5+0,4abed8+100 */
+    background: #5ecbb5; /* Old browsers */
+    background: -moz-linear-gradient(top, #5ecbb5 0%, #4abed8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #5ecbb5 0%,#4abed8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #5ecbb5 0%,#4abed8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ecbb5', endColorstr='#4abed8',GradientType=0 ); /* IE6-9 */
+    color: white;
+    padding: 60px 0;
+    .flex{
+        display: flex;
+        margin: 40px 0;
+        img{
+            display: block;
+            margin: auto;
+        }
+        .flex-module{
+            position: relative;
+            width: 25%;
+            background: white;
+            padding: 25px 0;
+            text-align: center;
+            margin: 0px 2px;
+            color: black;
+            .float-desc{
+                font-family: ClearSansReg;
+                font-size: 13px;
+                padding: 20px;
+                color: white;
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+2,000000+100&1+0,1+25,0.52+99 */
+                background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 25%, rgba(0,0,0,0.52) 99%, rgba(0,0,0,0.52) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 2%,rgba(0,0,0,1) 25%,rgba(0,0,0,0.52) 99%,rgba(0,0,0,0.52) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 2%,rgba(0,0,0,1) 25%,rgba(0,0,0,0.52) 99%,rgba(0,0,0,0.52) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#85000000',GradientType=0 ); /* IE6-9 */
+                position: absolute;
+                top: 100%;
+                overflow: hidden;
+                opacity: 0;
+                max-height: 0;
+                transition: all .5s ease;
+            }
+        }
+        .flex-module:after{
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            background: white;
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%) rotateZ(45deg);
+            transition: all .3s ease;
+        }
+        .flex-module:hover{
+            .float-desc{
+                opacity: 1;
+                max-height: 400px;
+            }
+
+        }
+        .flex-module:hover:after{
+            background: black;
+        }
+
+
+        .subtitle{
+            font-family: QuicksandReg;
+            padding: 20px 0 0;
+            opacity: 0.7;
+        }
+    }
+}
 .title{
     font-size: 35px;
     font-family: AkrobatBold;
     margin: 10px 0;
 }
 #indexProductHighlight{
-    background: #f3f3f3;
+    // background: #f3f3f3;
     padding: 40px 0;
     .product-flex{
         width: 70%;
@@ -668,6 +757,9 @@ ul.slick-dots{
         width: 33.4%;
         position: relative;
         transition: all .3s ease;
+        img{
+
+        }
     }
     .flex-center{
         width: 23vw;
@@ -679,6 +771,7 @@ ul.slick-dots{
         text-align: left;
         color: white;
         font-size: 40px;
+        align-items: center;
         .subcaption{
             text-align: left;
             font-size: 15px;
@@ -864,6 +957,7 @@ ul.slick-dots{
     min-height: 400px;
     padding-top: 150px;
     color: white;
+    min-height: 72vh;
     .group{
         width: 60%;
         margin: auto;
@@ -904,6 +998,18 @@ ul.slick-dots{
             }
         }
     }
+    .dropdown-parent{
+        display: none;
+    }
+    .request-button{
+        @extend .gradient-button;
+        width: 100% !important;
+        padding: 10px !important;
+        transition: all .8s ease !important;
+    }
+    // .request-button:hover{
+    //     filter: hue-rotate(340deg);
+    // }
 }
 #supportBanner.entry{
     .section-title{
@@ -913,11 +1019,13 @@ ul.slick-dots{
         opacity: 0;
         left: 50px;
     }
+
 }
 .dropdown-parent{
     padding: 10px 0 0;
     max-height: 50px;
     overflow: hidden;
+    // display: none;
     transition: all .5s ease;
     font-family: ClearSansReg;
     ul{
@@ -1194,4 +1302,5 @@ textarea{
     outline: none;
     letter-spacing: 1px;
     font-family: ClearSansBold;
+    transition: all 1.3s ease;
 }

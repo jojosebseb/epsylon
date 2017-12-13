@@ -827,6 +827,12 @@ ul.slick-dots{
     min-height: 400px;
     padding-top: 150px;
     color: white;
+    .dropdown-parent{
+        display: none;
+    }
+    .request-button{
+        @extend .gradient-button;
+    }
     .group{
         width: 60%;
         margin: auto;
