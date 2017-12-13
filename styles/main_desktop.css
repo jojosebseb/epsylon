@@ -427,14 +427,14 @@ ul.slick-dots button {
   font-size: 13px;
   padding: 20px;
   color: white;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+2,000000+100&1+0,1+25,0.52+99 */
-  background: -moz-linear-gradient(top, black 0%, black 2%, black 25%, rgba(0, 0, 0, 0.52) 99%, rgba(0, 0, 0, 0.52) 100%);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+2,000000+100&1+0,1+25,0.7+100 */
+  background: -moz-linear-gradient(top, black 0%, black 2%, black 25%, rgba(0, 0, 0, 0.7) 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, black 0%, black 2%, black 25%, rgba(0, 0, 0, 0.52) 99%, rgba(0, 0, 0, 0.52) 100%);
+  background: -webkit-linear-gradient(top, black 0%, black 2%, black 25%, rgba(0, 0, 0, 0.7) 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, black 0%, black 2%, black 25%, rgba(0, 0, 0, 0.52) 99%, rgba(0, 0, 0, 0.52) 100%);
+  background: linear-gradient(to bottom, black 0%, black 2%, black 25%, rgba(0, 0, 0, 0.7) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#85000000',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#b3000000',GradientType=0 );
   /* IE6-9 */
   position: absolute;
   top: 100%;
@@ -593,6 +593,7 @@ ul.slick-dots button {
 
 #indexSection-3 {
   padding: 40px 0;
+  background: #f5f5f5;
 }
 
 #indexSection-3 .w30 {
@@ -741,16 +742,25 @@ ul.slick-dots button {
 #moduleBelt .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 #moduleBelt .flex-module {
-  width: 90px;
-  height: 90px;
+  width: 50%;
   position: relative;
-  background: white;
   left: 0;
   border-radius: 5px;
+  display: flex;
   transition: all 1.3s ease;
+  margin: 20px 0;
+}
+
+#moduleBelt .flex-module .img-box {
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 5px;
+  position: relative;
 }
 
 #moduleBelt .flex-module img {
@@ -763,27 +773,16 @@ ul.slick-dots button {
 }
 
 #moduleBelt .flex-module .desc {
-  position: absolute;
-  top: 110%;
   color: white;
   font-family: ClearSansReg;
-  width: 100%;
-  text-align: center;
-  left: 0;
   transition: all .3s ease;
+  padding-left: 10px;
+  width: 70%;
+  padding-left: 20px;
 }
 
-#moduleBelt .flex-module:hover {
-  transform: scale(1.1);
-}
-
-#moduleBelt .flex-module:hover img {
-  transform: translate(-50%, -50%) scale(0.9);
-  filter: grayscale(0);
-}
-
-#moduleBelt .flex-module:hover .desc {
-  transform: translateY(-5px) scale(0.9);
+#moduleBelt .flex-module .desc .desc-paragraph {
+  font-size: 14px;
 }
 
 #moduleBelt.entry .flex-module {
@@ -791,8 +790,28 @@ ul.slick-dots button {
   opacity: 0;
 }
 
+#whySysad {
+  padding: 40px 0;
+}
+
+#whySysad .flex-module {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+}
+
+#whySysad .flex-module .w50 {
+  width: 50%;
+  padding: 0 20px;
+}
+
+#whySysad .flex-module.rev {
+  flex-direction: row-reverse;
+}
+
 #featureBelt {
   padding: 50px;
+  display: none;
   font-family: ClearSansReg;
 }
 
@@ -1004,6 +1023,7 @@ ul.slick-dots button {
   font-family: ClearSansReg;
   margin-bottom: 100px;
   transition: all .5s ease .3s;
+  line-height: 2;
 }
 
 #mainBelt .w40 img {
@@ -1089,7 +1109,6 @@ ul.slick-dots button {
   min-height: 400px;
   padding-top: 150px;
   color: white;
-  min-height: 72vh;
 }
 
 #supportBanner .group {
@@ -1147,6 +1166,17 @@ ul.slick-dots button {
   width: 100% !important;
   padding: 10px !important;
   transition: all .8s ease !important;
+}
+
+.border-button {
+  border: 1px solid white;
+  padding: 10px;
+  font-family: ClearSansReg;
+  display: block;
+  width: 180px;
+  text-align: center;
+  margin: 30px auto;
+  border-radius: 5px;
 }
 
 #supportBanner.entry .section-title {
@@ -1213,23 +1243,18 @@ ul.slick-dots button {
 }
 
 #aboutBanner {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7222ff+0,4fc5fe+100 */
-  background: #7222ff;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #7222ff 0%, #4fc5fe 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #7222ff 0%, #4fc5fe 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #7222ff 0%, #4fc5fe 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7222ff', endColorstr='#4fc5fe',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
   padding: 130px 0 80px;
-  color: white;
+  text-align: center;
 }
 
 #aboutBanner .title {
   text-transform: uppercase;
+}
+
+#aboutBanner .paragraph {
+  width: 70%;
+  margin: 40px auto;
+  line-height: 1.5;
 }
 
 #aboutSection-1 {
@@ -1278,6 +1303,10 @@ ul.slick-dots button {
   margin: auto;
 }
 
+#aboutSection-3.hide {
+  display: none;
+}
+
 #aboutSection-3 {
   padding: 50px 0 70px;
   text-align: center;
@@ -1299,6 +1328,43 @@ ul.slick-dots button {
   justify-content: space-between;
   flex-wrap: wrap;
   text-align: left;
+}
+
+#aboutSection-4 {
+  text-align: center;
+  padding: 50px 0;
+  background: #e5e5e5;
+}
+
+#aboutSection-4 .section-title {
+  padding: 30px 0 10px;
+}
+
+#aboutSection-5 {
+  padding: 40px 0;
+}
+
+#aboutSection-5 .mission-module {
+  display: flex;
+  font-family: ClearSansReg;
+  align-items: center;
+  width: 530px;
+  margin: 20px auto;
+}
+
+#aboutSection-5 .img {
+  width: 80px;
+  padding: 10px;
+}
+
+#aboutSection-5 .img img {
+  width: 100%;
+  display: block;
+}
+
+#aboutSection-5 .text {
+  width: 450px;
+  padding-left: 30px;
 }
 
 #footer {
@@ -1343,10 +1409,45 @@ ul.slick-dots button {
   margin-bottom: 10px;
 }
 
+#helpFeature .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#helpFeature .title {
+  font-size: 22px;
+  opacity: 0.8;
+  padding: 10px 0 0;
+}
+
+#helpFeature .subcaption {
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+#helpFeature .img-box {
+  height: 100px;
+  position: relative;
+}
+
+#helpFeature .img-box img {
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#helpFeature .flex-module {
+  width: 30%;
+  text-align: center;
+}
+
 #contactSection {
   min-height: 80vh;
   background-image: url("../img/dummy/contact-dummy.png");
-  padding: 20vh 0;
+  padding: 20vh 0 10vh;
   color: white;
   font-family: ClearSansReg;
 }
@@ -1370,12 +1471,12 @@ ul.slick-dots button {
 }
 
 #contactSection .contact-form .subcaption {
-  text-align: left;
+  text-align: center;
   width: 100%;
 }
 
 #contactSection .contact-form .section-title {
-  text-align: left;
+  text-align: center;
 }
 
 #contactSection .contact-form .flex {
@@ -1405,6 +1506,8 @@ ul.slick-dots button {
   position: relative;
   opacity: 1;
   transition: all .5s ease 2s;
+  width: 80%;
+  padding: 10px;
 }
 
 #contactSection .form-input {
