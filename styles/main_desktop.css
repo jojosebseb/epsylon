@@ -87,14 +87,55 @@
   font-size: 14px;
 }
 
-#navbar .nav-ul li {
+#navbar .nav-ul > li {
   margin: 0 25px;
   letter-spacing: 0px;
+  position: relative;
   transition: all .3s ease;
+  padding: 15px 0;
 }
 
 #navbar .nav-ul li:hover {
   color: rgba(0, 0, 0, 0.6);
+}
+
+#navbar .submenu {
+  position: absolute;
+  background: #fff;
+  color: black;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 7px;
+  display: none;
+  top: 40px;
+  left: -20px;
+  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+#navbar .submenu > li {
+  width: 200px;
+  padding: 10px 0 10px 10px;
+  justify-content: center;
+  color: #555;
+}
+
+#navbar .submenu > li > a {
+  display: flex;
+  align-items: center;
+}
+
+#navbar .submenu > li > a img {
+  max-width: 50px;
+  display: block;
+  margin-right: 10px;
+}
+
+#navbar .submenu > li:hover {
+  color: #000;
+}
+
+#navbar .has-submenu:hover > .submenu {
+  display: block;
 }
 
 #navbar .nav-function .function-button {
@@ -116,7 +157,7 @@
   box-shadow: 0px 2px 20px 3px rgba(0, 0, 0, 0.24);
 }
 
-#navbar.white li:hover {
+#navbar.white > li:hover {
   color: #74cfc1;
 }
 
@@ -698,6 +739,18 @@ ul.slick-dots button {
   transform: scale(0.7);
 }
 
+.slide-button {
+  padding: 9px 35px;
+  border-radius: 30px;
+  font-family: ClearSansReg;
+  border: 1px solid white;
+  margin-top: 40px;
+  display: block;
+  width: 200px;
+  text-align: center;
+  outline: none;
+}
+
 #contactUs {
   background: #5cc9b9;
   text-align: center;
@@ -769,7 +822,6 @@ ul.slick-dots button {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.85);
   transition: all .3s ease;
-  filter: grayscale(1);
 }
 
 #moduleBelt .flex-module .desc {
@@ -792,6 +844,7 @@ ul.slick-dots button {
 
 #whySysad {
   padding: 40px 0;
+  font-family: ClearSansReg;
 }
 
 #whySysad .flex-module {
@@ -859,13 +912,13 @@ ul.slick-dots button {
   font-family: ClearSansReg;
   justify-content: space-between;
   align-items: center;
-  height: 350px;
+  padding: 20px 0;
   margin-bottom: 40px;
 }
 
 #conceptBelt .flex-module {
   left: 0;
-  height: 330px;
+  height: 200px;
   width: 33.4%;
   position: relative;
   transition: all .3s ease;
@@ -936,9 +989,7 @@ ul.slick-dots button {
 }
 
 #conceptBelt .flex-module:hover {
-  width: 40%;
   z-index: 5;
-  height: 350px;
 }
 
 #conceptBelt.entry .flex-module {
@@ -972,6 +1023,20 @@ ul.slick-dots button {
 
 #mainBelt {
   padding-top: 150px;
+  font-family: QuicksandReg;
+}
+
+#mainBelt .module-icon {
+  background: white;
+  height: 65px;
+  width: 65px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  borra: 3px;
+  border-radius: 3px;
+  margin-right: 10px;
 }
 
 #mainBelt .container {
@@ -994,7 +1059,7 @@ ul.slick-dots button {
 
 #mainBelt .top img {
   display: block;
-  padding-right: 10px;
+  transform: scale(0.7);
 }
 
 #mainBelt .top .caption {
@@ -1020,7 +1085,7 @@ ul.slick-dots button {
 }
 
 #mainBelt .bottom {
-  font-family: ClearSansReg;
+  font-family: QuicksandReg;
   margin-bottom: 100px;
   transition: all .5s ease .3s;
   line-height: 2;
@@ -1447,6 +1512,7 @@ ul.slick-dots button {
 #contactSection {
   min-height: 80vh;
   background-image: url("../img/dummy/contact-dummy.png");
+  background-size: cover;
   padding: 20vh 0 10vh;
   color: white;
   font-family: ClearSansReg;

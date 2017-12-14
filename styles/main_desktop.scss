@@ -76,13 +76,53 @@ $container-width: 1100px;
         display: flex;
         text-transform: uppercase;
         font-size: 14px;
-        li{
+        >li{
             margin: 0 25px;
             letter-spacing: 0px;
+            position: relative;
             transition: all .3s ease;
+            padding: 15px 0;
         }
         li:hover{
             color: rgba(0,0,0,0.6);
+        }
+    }
+    .submenu{
+        position: absolute;
+        background: #fff;
+        color: black;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 7px;
+        display: none;
+        top: 40px;
+        left: -20px;
+        box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.2);
+        >li{
+            width: 200px;
+            padding: 10px 0 10px 10px;
+            justify-content: center;
+            color: #555;
+            >a{
+                display: flex;
+                align-items: center;
+                img{
+                    max-width: 50px;
+                    display: block;
+                    margin-right: 10px;
+                }
+
+            }
+
+
+        }
+        >li:hover{
+            color: #000;
+        }
+    }
+    .has-submenu:hover{
+        >.submenu{
+            display: block;
         }
     }
     .nav-function{
@@ -103,7 +143,7 @@ $container-width: 1100px;
     color: black;
     border-bottom: 1px solid #eee;
     box-shadow: 0px 2px 20px 3px rgba(0, 0, 0, 0.24);
-    li:hover{
+    >li:hover{
         color: #74cfc1;
     }
     .logo-container{
@@ -619,6 +659,17 @@ ul.slick-dots{
         }
     }
 }
+.slide-button{
+    padding: 9px 35px;
+    border-radius: 30px;
+    font-family: ClearSansReg;
+    border: 1px solid white;
+    margin-top: 40px;
+    display: block;
+    width: 200px;
+    text-align: center;
+    outline: none;
+}
 #contactUs{
     background: #5cc9b9;
     text-align: center;
@@ -680,7 +731,6 @@ ul.slick-dots{
             left: 50%;
             transform: translate(-50%, -50%) scale(0.85);
             transition: all .3s ease;
-            filter: grayscale(1);
         }
         .desc{
             color: white;
@@ -704,6 +754,7 @@ ul.slick-dots{
 }
 #whySysad{
     padding: 40px 0;
+    font-family: ClearSansReg;
     .flex-module{
         display: flex;
         align-items: center;
@@ -767,11 +818,11 @@ ul.slick-dots{
     font-family: ClearSansReg;
     justify-content: space-between;
     align-items: center;
-    height: 350px;
+    padding: 20px 0;
     margin-bottom: 40px;
     .flex-module{
         left: 0;
-        height: 330px;
+        height: 200px;
         width: 33.4%;
         position: relative;
         transition: all .3s ease;
@@ -823,9 +874,7 @@ ul.slick-dots{
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5883b9', endColorstr='#2b8e9f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     }
     .flex-module:hover{
-        width: 40%;
         z-index: 5;
-        height: 350px;
     }
 }
 #conceptBelt.entry{
@@ -857,6 +906,19 @@ ul.slick-dots{
 }
 #mainBelt{
     padding-top: 150px;
+    font-family: QuicksandReg;
+    .module-icon{
+        background: white;
+        height: 65px;
+        width: 65px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        borra: 3px;
+        border-radius: 3px;
+        margin-right: 10px;
+    }
     .container{
         display: flex;
         align-items: center;
@@ -873,7 +935,7 @@ ul.slick-dots{
         transition: all .5s ease .1s;
         img{
             display: block;
-            padding-right: 10px;
+            transform: scale(0.7);
         }
         .caption{
             border-left: 1px solid #333;
@@ -896,7 +958,7 @@ ul.slick-dots{
         }
     }
     .bottom{
-        font-family: ClearSansReg;
+        font-family: QuicksandReg;
         margin-bottom: 100px;
         transition: all .5s ease .3s;
         line-height: 2;
@@ -1282,6 +1344,7 @@ ul.slick-dots{
 #contactSection{
     min-height: 80vh;
     background-image: url('../img/dummy/contact-dummy.png');
+    background-size: cover;
     padding: 20vh 0 10vh;
     color: white;
     font-family: ClearSansReg;

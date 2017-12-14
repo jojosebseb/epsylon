@@ -357,6 +357,34 @@ ul.slick-dots button {
   margin: 20px 0;
 }
 
+#indexSection-1 .subcaption {
+  position: relative;
+  top: 0px;
+  opacity: 1;
+  transition: all .5s ease .2s;
+}
+
+#indexSection-1 .flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#indexSection-1 .flex .flex-module {
+  width: 100%;
+  padding: 50px 20px 0;
+}
+
+#indexSection-1 .flex .caption {
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+#indexSection-1 .flex .cap-desc {
+  font-family: ClearSansBold;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
 #indexSection-1.entry .gradient-title {
   position: relative;
   top: 50px;
@@ -369,6 +397,78 @@ ul.slick-dots button {
   top: 50px;
   transition: all .5s ease .2s;
   opacity: 0;
+}
+
+#indexSection-1a {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5ecbb5+0,4abed8+100 */
+  background: #5ecbb5;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #5ecbb5 0%, #4abed8 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #5ecbb5 0%, #4abed8 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #5ecbb5 0%, #4abed8 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ecbb5', endColorstr='#4abed8',GradientType=0 );
+  /* IE6-9 */
+  color: white;
+  padding: 60px 0 5px;
+}
+
+#indexSection-1a .flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px 0 0;
+}
+
+#indexSection-1a .flex img {
+  display: block;
+  margin: auto;
+}
+
+#indexSection-1a .flex .flex-module {
+  position: relative;
+  width: 100%;
+  background: white;
+  padding: 25px 0;
+  text-align: center;
+  margin: 5px 0px;
+  color: black;
+}
+
+#indexSection-1a .flex .flex-module .float-desc {
+  font-family: ClearSansReg;
+  font-size: 14px;
+  padding: 20px 20px 0;
+  transition: all .5s ease;
+}
+
+#indexSection-1a .flex .flex-module:after {
+  content: "";
+  display: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotateZ(45deg);
+  transition: all .3s ease;
+}
+
+#indexSection-1a .flex .flex-module:hover .float-desc {
+  opacity: 1;
+  max-height: 400px;
+}
+
+#indexSection-1a .flex .flex-module:hover:after {
+  background: black;
+}
+
+#indexSection-1a .flex .subtitle {
+  font-family: QuicksandReg;
+  padding: 20px 0 0;
+  opacity: 0.7;
 }
 
 .title {
@@ -450,7 +550,7 @@ ul.slick-dots button {
 }
 
 #indexSection-2 .flex .flex-module {
-  width: 45%;
+  width: 200px;
   padding: 10px;
   height: 100px;
   position: relative;
@@ -465,6 +565,10 @@ ul.slick-dots button {
   transform: translate(-50%, -50%);
 }
 
+#indexSection-3 {
+  padding-top: 40px;
+}
+
 #indexSection-3 .slick-dots {
   margin-top: 10px;
 }
@@ -475,7 +579,7 @@ ul.slick-dots button {
 }
 
 #indexSection-3 .testimonial-slide {
-  padding: 40px 0;
+  padding: 20px 0 40px;
   text-align: center;
 }
 
@@ -606,11 +710,11 @@ ul.slick-dots button {
 
 #moduleBelt {
   background: #333;
-  padding: 80px 0 80px;
+  padding: 50px 0 50px;
   background-image: url("../img/dummy/dummy-7.png");
-  background-position: center center;
-  background-size: cover;
   color: white;
+  background-size: cover;
+  background-position: center center;
 }
 
 #moduleBelt .section-title {
@@ -619,51 +723,83 @@ ul.slick-dots button {
 
 #moduleBelt .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 #moduleBelt .flex-module {
-  width: 23vw;
-  height: 23vw;
+  width: 100%;
   position: relative;
+  left: 0;
+  border-radius: 5px;
+  display: flex;
+  transition: all 1.3s ease;
+  margin: 20px 0;
+  align-items: center;
+}
+
+#moduleBelt .flex-module .img-box {
+  width: 70px;
+  height: 70px;
   background: white;
   border-radius: 5px;
-  transition: all .3s ease;
-  margin: 0 1vw 50px;
+  position: relative;
 }
 
 #moduleBelt .flex-module img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.55);
   transition: all .3s ease;
-  width: 8vw;
+  filter: grayscale(1);
 }
 
 #moduleBelt .flex-module .desc {
-  position: absolute;
-  top: 110%;
   color: white;
   font-family: ClearSansReg;
-  width: 100%;
-  text-align: center;
-  left: 0;
   transition: all .3s ease;
-  font-size: 14px;
+  padding-left: 10px;
+  width: 80%;
+  padding-left: 20px;
 }
 
-#moduleBelt .flex-module:hover {
-  transform: scale(1.1);
+#moduleBelt .flex-module .desc .desc-paragraph {
+  font-size: 12px;
 }
 
-#moduleBelt .flex-module:hover img {
-  transform: translate(-50%, -50%) scale(0.9);
+.border-button {
+  border: 1px solid white;
+  padding: 10px;
+  font-family: ClearSansReg;
+  display: block;
+  width: 180px;
+  text-align: center;
+  margin: 30px auto;
+  border-radius: 5px;
 }
 
-#moduleBelt .flex-module:hover .desc {
-  transform: translateY(-5px) scale(0.9);
+#whySysad {
+  padding: 40px 0;
+  font-family: ClearSansReg;
+}
+
+#whySysad img {
+  max-width: 60%;
+  display: block;
+  margin: auto;
+}
+
+#whySysad .flex-module {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px 0;
+}
+
+#whySysad .flex-module .w50 {
+  width: 100%;
+  padding: 10px 20px;
 }
 
 #featureBelt {
@@ -715,7 +851,7 @@ ul.slick-dots button {
   width: 100%;
   position: relative;
   transition: all .3s ease;
-  padding: 30px 50px;
+  padding: 30px 15vw;
 }
 
 #conceptBelt .title {
@@ -723,6 +859,7 @@ ul.slick-dots button {
 }
 
 #conceptBelt .flex-center {
+  justify-content: center;
   display: flex;
   text-align: left;
   color: white;
@@ -811,6 +948,7 @@ ul.slick-dots button {
 
 #mainBelt {
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 #mainBelt .w40 {
@@ -925,8 +1063,7 @@ ul.slick-dots button {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4ba88e', endColorstr='#39addd',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
-  min-height: 400px;
-  padding-top: 150px;
+  padding: 100px 0 50px;
   color: white;
 }
 
@@ -975,6 +1112,49 @@ ul.slick-dots button {
   display: block;
   margin: auto;
   transform: scale(0.7);
+}
+
+#helpFeature {
+  padding-top: 40px;
+}
+
+#helpFeature .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#helpFeature .title {
+  font-size: 22px;
+  opacity: 0.8;
+}
+
+#helpFeature .subcaption {
+  font-size: 14px;
+  padding: 0px 15px;
+}
+
+#helpFeature .img-box img {
+  display: block;
+  margin: auto;
+}
+
+#helpFeature .flex-module {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.slide-button {
+  padding: 9px 35px;
+  border-radius: 30px;
+  font-family: ClearSansReg;
+  border: 1px solid white;
+  margin: 40px auto;
+  display: block;
+  width: 200px;
+  text-align: center;
+  outline: none;
 }
 
 .dropdown-parent {
@@ -1293,4 +1473,38 @@ ul.slick-dots button {
   outline: none;
   letter-spacing: 1px;
   font-family: ClearSansBold;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  #indexProductHighlight .product-flex .product-module {
+    width: 25%;
+  }
+  #indexSection-1 .flex .flex-module {
+    width: 25%;
+  }
+  #indexSection-1a .flex {
+    justify-content: space-between;
+  }
+  #indexSection-1a .flex .flex-module {
+    width: 24.5%;
+  }
+  #whySysad {
+    padding: 40px 0;
+    font-family: ClearSansReg;
+  }
+  #whySysad .flex-module {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+  }
+  #whySysad .flex-module .w50 {
+    width: 50%;
+    padding: 0 20px;
+  }
+  #featureBelt .flex .flex-module {
+    width: 25%;
+  }
+  #moduleBelt .flex-module {
+    width: 50%;
+  }
 }
