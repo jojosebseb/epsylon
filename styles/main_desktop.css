@@ -67,7 +67,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px 00px;
+  padding: 15px 00px;
   align-items: center;
 }
 
@@ -85,6 +85,7 @@
   display: flex;
   text-transform: uppercase;
   font-size: 14px;
+  align-items: center;
 }
 
 #navbar .nav-ul > li {
@@ -92,7 +93,7 @@
   letter-spacing: 0px;
   position: relative;
   transition: all .3s ease;
-  padding: 15px 0;
+  padding: 18px 0;
 }
 
 #navbar .nav-ul li:hover {
@@ -136,6 +137,10 @@
 
 #navbar .has-submenu:hover > .submenu {
   display: block;
+}
+
+#navbar .nav-function {
+  margin-left: 80px;
 }
 
 #navbar .nav-function .function-button {
@@ -189,7 +194,7 @@ ul.slick-dots li {
   width: 8px;
   cursor: pointer;
   height: 8px;
-  background: white;
+  background: #eee;
   border-radius: 50%;
   margin: 10px 10px;
 }
@@ -595,7 +600,6 @@ ul.slick-dots button {
 }
 
 #indexSection-2 .flex {
-  display: flex;
   justify-content: space-between;
   padding: 40px 0;
   align-items: center;
@@ -620,6 +624,12 @@ ul.slick-dots button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  filter: grayscale(1);
+  transition: all .3s ease;
+}
+
+#indexSection-2 .flex .flex-module:hover img {
+  filter: grayscale(0);
 }
 
 #indexSection-2.entry .gradient-title {
@@ -858,8 +868,26 @@ ul.slick-dots button {
   padding: 0 20px;
 }
 
+#whySysad .flex-module .w50 img {
+  display: block;
+  margin: auto;
+}
+
 #whySysad .flex-module.rev {
   flex-direction: row-reverse;
+}
+
+#whySysad * {
+  transition: all .3s ease;
+  top: 0;
+  opacity: 1;
+  position: relative;
+}
+
+#whySysad.entry * {
+  opacity: 0;
+  position: relative;
+  top: 20px;
 }
 
 #featureBelt {
@@ -942,8 +970,16 @@ ul.slick-dots button {
   font-size: 15px;
 }
 
+#conceptBelt .flex-center .title {
+  margin-top: 0;
+}
+
 #conceptBelt .flex-center .group {
   padding-left: 20px;
+}
+
+#conceptBelt .flex-center img {
+  transform: scale(0.8);
 }
 
 #conceptBelt #fm1 {
@@ -985,6 +1021,20 @@ ul.slick-dots button {
   background: linear-gradient(135deg, #5883b9 1%, #2b8e9f 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5883b9', endColorstr='#2b8e9f',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+#conceptBelt #fm4 {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#46b98a+53,d6db4c+100 */
+  background: #46b98a;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #46b98a 53%, #d6db4c 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #46b98a 53%, #d6db4c 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #46b98a 53%, #d6db4c 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#46b98a', endColorstr='#d6db4c',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -1055,11 +1105,19 @@ ul.slick-dots button {
   font-size: 40px;
   color: rgba(0, 0, 0, 0.6);
   transition: all .5s ease .1s;
+  margin-bottom: 20px;
 }
 
 #mainBelt .top img {
   display: block;
   transform: scale(0.7);
+}
+
+#mainBelt .top .shadow-img {
+  transform: scale(1);
+  width: 80px;
+  margin-right: 20px;
+  filter: drop-shadow(-3px 3px 3px rgba(0, 0, 0, 0.1));
 }
 
 #mainBelt .top .caption {
@@ -1088,7 +1146,7 @@ ul.slick-dots button {
   font-family: QuicksandReg;
   margin-bottom: 100px;
   transition: all .5s ease .3s;
-  line-height: 2;
+  line-height: 1.7;
 }
 
 #mainBelt .w40 img {
@@ -1100,6 +1158,14 @@ ul.slick-dots button {
   position: relative;
 }
 
+#mainBelt .white {
+  color: white !important;
+}
+
+#mainBelt .white .caption {
+  border-left: 1px solid white;
+}
+
 #mainBelt.entry .top, #mainBelt.entry .middle, #mainBelt.entry .bottom {
   top: 50px;
   opacity: 0;
@@ -1108,6 +1174,14 @@ ul.slick-dots button {
 #mainBelt.entry .w40 img {
   opacity: 0;
   transform: translateX(50px);
+}
+
+#mainBelt.sysadmodule {
+  padding-top: 130px;
+}
+
+#mainBelt.sysadmodule .bottom {
+  margin-bottom: 46px;
 }
 
 #clientBanner {
@@ -1322,6 +1396,18 @@ ul.slick-dots button {
   line-height: 1.5;
 }
 
+#aboutBanner * {
+  position: relative;
+  top: 0px;
+  opacity: 1;
+  transition: all .3s ease;
+}
+
+#aboutBanner.entry * {
+  top: 20px;
+  opacity: 0;
+}
+
 #aboutSection-1 {
   padding: 50px 0;
 }
@@ -1405,6 +1491,19 @@ ul.slick-dots button {
   padding: 30px 0 10px;
 }
 
+#aboutSection-4 * {
+  position: relative;
+  top: 0px;
+  opacity: 1;
+  transition: all .3s ease;
+}
+
+#aboutSection-4.entry * {
+  position: relative;
+  top: 30px;
+  opacity: 0;
+}
+
 #aboutSection-5 {
   padding: 40px 0;
 }
@@ -1432,6 +1531,19 @@ ul.slick-dots button {
   padding-left: 30px;
 }
 
+#aboutSection-5 * {
+  position: relative;
+  top: 0px;
+  opacity: 1;
+  transition: all .3s ease;
+}
+
+#aboutSection-5.entry * {
+  position: relative;
+  top: 30px;
+  opacity: 0;
+}
+
 #footer {
   background: #323232;
   font-family: ClearSansReg;
@@ -1445,7 +1557,6 @@ ul.slick-dots button {
 
 #footer .footer-copyright .footer-flex {
   padding: 0;
-  width: 60%;
 }
 
 #footer .footer-copyright .footer-flex li {
@@ -1457,6 +1568,8 @@ ul.slick-dots button {
   text-align: left;
   color: white;
   padding: 40px 0;
+  width: 70%;
+  margin: auto;
   justify-content: space-between;
 }
 

@@ -61,7 +61,7 @@ $container-width: 1100px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 20px 00px;
+        padding: 15px 00px;
         align-items: center;
     }
     .logo-container{
@@ -76,12 +76,13 @@ $container-width: 1100px;
         display: flex;
         text-transform: uppercase;
         font-size: 14px;
+        align-items: center;
         >li{
             margin: 0 25px;
             letter-spacing: 0px;
             position: relative;
             transition: all .3s ease;
-            padding: 15px 0;
+            padding: 18px 0;
         }
         li:hover{
             color: rgba(0,0,0,0.6);
@@ -126,6 +127,7 @@ $container-width: 1100px;
         }
     }
     .nav-function{
+        margin-left: 80px;
         .function-button{
             border: 1px solid white;
             padding: 10px 15px;
@@ -181,7 +183,7 @@ ul.slick-dots{
         width: 8px;
         cursor: pointer;
         height: 8px;
-        background: white;
+        background: #eee;
         border-radius: 50%;
         margin: 10px 10px;
     }
@@ -536,7 +538,7 @@ ul.slick-dots{
         top: 0;
     }
     .flex{
-        display: flex;
+        // display: flex;
         justify-content: space-between;
         padding: 40px 0;
         align-items: center;
@@ -557,6 +559,13 @@ ul.slick-dots{
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                filter: grayscale(1);
+                transition: all .3s ease;
+            }
+        }
+        .flex-module:hover{
+            img{
+                filter: grayscale(0);
             }
         }
     }
@@ -762,10 +771,27 @@ ul.slick-dots{
         .w50{
             width: 50%;
             padding: 0 20px;
+            img{
+                display: block;
+                margin: auto;
+            }
         }
     }
     .flex-module.rev{
         flex-direction: row-reverse;
+    }
+    *{
+        transition: all .3s ease;
+        top: 0;
+        opacity: 1;
+        position: relative;
+    }
+}
+#whySysad.entry{
+    *{
+        opacity: 0;
+        position: relative;
+        top: 20px;
     }
 }
 #featureBelt{
@@ -845,8 +871,14 @@ ul.slick-dots{
             text-align: left;
             font-size: 15px;
         }
+        .title{
+            margin-top: 0;
+        }
         .group{
             padding-left: 20px;
+        }
+        img{
+            transform: scale(0.8);
         }
     }
     #fm1{
@@ -872,6 +904,14 @@ ul.slick-dots{
         background: -webkit-linear-gradient(-45deg, rgba(88,131,185,1) 1%,rgba(43,142,159,1) 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(135deg, rgba(88,131,185,1) 1%,rgba(43,142,159,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5883b9', endColorstr='#2b8e9f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+    #fm4{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#46b98a+53,d6db4c+100 */
+background: rgb(70,185,138); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(70,185,138,1) 53%, rgba(214,219,76,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(70,185,138,1) 53%,rgba(214,219,76,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(70,185,138,1) 53%,rgba(214,219,76,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#46b98a', endColorstr='#d6db4c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     }
     .flex-module:hover{
         z-index: 5;
@@ -933,9 +973,16 @@ ul.slick-dots{
         font-size: 40px;
         color: rgba(0,0,0,0.6);
         transition: all .5s ease .1s;
+        margin-bottom: 20px;
         img{
             display: block;
             transform: scale(0.7);
+        }
+        .shadow-img{
+            transform: scale(1);
+            width: 80px;
+            margin-right: 20px;
+            filter: drop-shadow(-3px 3px 3px rgba(0,0,0,0.1));
         }
         .caption{
             border-left: 1px solid #333;
@@ -961,7 +1008,7 @@ ul.slick-dots{
         font-family: QuicksandReg;
         margin-bottom: 100px;
         transition: all .5s ease .3s;
-        line-height: 2;
+        line-height: 1.7;
     }
     .w40{
         img{
@@ -971,6 +1018,12 @@ ul.slick-dots{
     .top, .middle, .bottom{
         top: 0;
         position: relative;
+    }
+    .white{
+        color: white !important;
+        .caption{
+            border-left: 1px solid white;
+        }
     }
 }
 #mainBelt.entry{
@@ -983,6 +1036,12 @@ ul.slick-dots{
             opacity: 0;
             transform: translateX(50px);
         }
+    }
+}
+#mainBelt.sysadmodule{
+    padding-top: 130px;
+    .bottom{
+        margin-bottom: 46px;
     }
 }
 #clientBanner{
@@ -1170,6 +1229,18 @@ ul.slick-dots{
         margin: 40px auto;
         line-height: 1.5;
     }
+    *{
+        position: relative;
+        top: 0px;
+        opacity: 1;
+        transition: all .3s ease;
+    }
+}
+#aboutBanner.entry{
+    *{
+        top: 20px;
+        opacity: 0;
+    }
 }
 #aboutSection-1{
     padding: 50px 0;
@@ -1243,6 +1314,19 @@ ul.slick-dots{
     .section-title{
         padding: 30px 0 10px;
     }
+    *{
+        position: relative;
+        top: 0px;
+        opacity: 1;
+        transition: all .3s ease;
+    }
+}
+#aboutSection-4.entry{
+    *{
+        position: relative;
+        top: 30px;
+        opacity: 0;
+    }
 }
 
 #aboutSection-5{
@@ -1266,6 +1350,19 @@ ul.slick-dots{
         width: 450px;
         padding-left: 30px;
     }
+    *{
+        position: relative;
+        top: 0px;
+        opacity: 1;
+        transition: all .3s ease;
+    }
+}
+#aboutSection-5.entry{
+    *{
+        position: relative;
+        top: 30px;
+        opacity: 0;
+    }
 }
 //main-section
 
@@ -1279,7 +1376,7 @@ ul.slick-dots{
         font-size: 13px;
         .footer-flex{
             padding: 0;
-            width: 60%;
+
             li{
                 margin-bottom: 0;
             }
@@ -1290,6 +1387,8 @@ ul.slick-dots{
         text-align: left;
         color: white;
         padding: 40px 0;
+        width: 70%;
+        margin: auto;
         justify-content: space-between;
         .title{
             color: #59b59e;

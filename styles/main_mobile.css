@@ -54,46 +54,14 @@
   min-height: 100px;
 }
 
-.mobile-handle {
-  width: 20px;
-  position: relative;
-  transition: all .3s ease;
-}
-
-.mobile-handle .mobile-lines {
-  border-bottom: 2px solid black;
-  margin: 4px 0;
-  position: relative;
-  transition: all .3s ease;
-}
-
-.mobile-handle.active {
-  transform: rotateZ(-90deg);
-}
-
-.mobile-handle.active #line1 {
-  transform: rotateZ(45deg);
-  top: 6px;
-}
-
-.mobile-handle.active #line2 {
-  opacity: 0;
-  transform: rotateZ(80deg);
-}
-
-.mobile-handle.active #line3 {
-  transform: rotateZ(-45deg);
-  top: -6px;
-}
-
 #navbar {
   font-family: QuicksandBold;
   width: 100%;
   position: fixed;
   z-index: 55;
   color: white;
-  background: white;
-  border-bottom: 1px solid #eee;
+  background: transparent;
+  border-bottom: 1px solid transparent;
   transition: all .3s ease;
 }
 
@@ -112,6 +80,7 @@
 #navbar .logo-container img {
   display: block;
   width: 100%;
+  filter: brightness(0) invert(1);
 }
 
 #navbar .nav-ul {
@@ -127,12 +96,15 @@
   flex-wrap: wrap;
 }
 
-#navbar .nav-ul li {
+#navbar .nav-ul > li {
   color: black;
-  margin: 0 15px;
   letter-spacing: 0px;
   width: 100%;
   padding: 15px 0;
+}
+
+#navbar .nav-ul > li > a {
+  margin-left: 10px;
 }
 
 #navbar .nav-ul.active {
@@ -140,13 +112,77 @@
 }
 
 #navbar .nav-function {
-  display: none;
+  color: black;
 }
 
 #navbar .nav-function .function-button {
-  border: 1px solid white;
-  padding: 10px 15px;
-  border-radius: 10px;
+  padding: 15px 10px;
+}
+
+#navbar .submenu {
+  color: black;
+  padding: 10px 10px;
+  display: none;
+  background: #eee;
+  margin-top: 10px;
+}
+
+#navbar .submenu > li {
+  padding: 10px 0 10px 0px;
+  justify-content: center;
+  color: #555;
+  margin: 0;
+}
+
+#navbar .submenu > li > a {
+  display: flex;
+  align-items: center;
+}
+
+#navbar .submenu > li > a img {
+  max-width: 40px;
+  display: block;
+  margin-right: 10px;
+}
+
+#navbar .submenu > li:hover {
+  color: #000;
+}
+
+#navbar .has-submenu:hover > .submenu {
+  display: block;
+}
+
+#navbar .mobile-handle {
+  width: 20px;
+  position: relative;
+  transition: all .3s ease;
+}
+
+#navbar .mobile-handle .mobile-lines {
+  border-bottom: 2px solid white;
+  margin: 4px 0;
+  position: relative;
+  transition: all .3s ease;
+}
+
+#navbar .mobile-handle.active {
+  transform: rotateZ(-90deg);
+}
+
+#navbar .mobile-handle.active #line1 {
+  transform: rotateZ(45deg);
+  top: 6px;
+}
+
+#navbar .mobile-handle.active #line2 {
+  opacity: 0;
+  transform: rotateZ(80deg);
+}
+
+#navbar .mobile-handle.active #line3 {
+  transform: rotateZ(-45deg);
+  top: -6px;
 }
 
 #navbar.white {
@@ -155,10 +191,12 @@
   border-bottom: 1px solid #eee;
 }
 
-#navbar.white .function-button {
-  border: 1px solid black;
-  padding: 10px 15px;
-  border-radius: 10px;
+#navbar.white .logo-container img {
+  filter: invert(0);
+}
+
+#navbar.white .mobile-handle .mobile-lines {
+  border-bottom: 2px solid black;
 }
 
 ul.slick-dots {
@@ -199,7 +237,7 @@ ul.slick-dots button {
 
 #indexSlider .slide-items {
   position: relative;
-  height: 80vh;
+  height: 50vh;
   background: #5cc9b9;
 }
 
@@ -563,6 +601,12 @@ ul.slick-dots button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  filter: grayscale(1);
+  transition: all .3s ease;
+}
+
+#indexSection-2 .flex .flex-module:hover img {
+  filter: grayscale(0);
 }
 
 #indexSection-3 {
@@ -922,6 +966,20 @@ ul.slick-dots button {
   /* IE6-9 fallback on horizontal gradient */
 }
 
+#conceptBelt #fm4 {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#46b98a+53,d6db4c+100 */
+  background: #46b98a;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #46b98a 53%, #d6db4c 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #46b98a 53%, #d6db4c 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #46b98a 53%, #d6db4c 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#46b98a', endColorstr='#d6db4c',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
 #conceptBelt .flex-module:hover {
   z-index: 5;
 }
@@ -959,6 +1017,19 @@ ul.slick-dots button {
   padding: 20px 5vw 0;
 }
 
+#mainBelt .module-icon {
+  background: white;
+  height: 45px;
+  width: 45px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  borra: 3px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
 #mainBelt .container {
   display: flex;
   align-items: center;
@@ -975,12 +1046,19 @@ ul.slick-dots button {
   align-items: center;
   font-size: 30px;
   color: rgba(0, 0, 0, 0.6);
+  padding-bottom: 25px;
 }
 
 #mainBelt .top img {
   display: block;
-  padding-right: 10px;
+  width: 25px;
+}
+
+#mainBelt .top .shadow-img {
+  transform: scale(1);
   width: 50px;
+  margin-right: 20px;
+  filter: drop-shadow(-3px 3px 3px rgba(0, 0, 0, 0.1));
 }
 
 #mainBelt .top .caption {
@@ -988,7 +1066,6 @@ ul.slick-dots button {
   padding-left: 15px;
   margin-left: 15px;
   font-size: 19px;
-  height: 40px;
   line-height: 40px;
 }
 
@@ -1007,6 +1084,18 @@ ul.slick-dots button {
 
 #mainBelt .bottom {
   font-family: ClearSansReg;
+}
+
+#mainBelt .white {
+  color: white !important;
+}
+
+#mainBelt .white .caption {
+  border-left: 1px solid white;
+}
+
+.hide {
+  display: none;
 }
 
 #clientBanner {
@@ -1072,7 +1161,7 @@ ul.slick-dots button {
 }
 
 #supportBanner .group {
-  width: 60%;
+  width: 80%;
   margin: auto;
 }
 
@@ -1212,24 +1301,17 @@ ul.slick-dots button {
 }
 
 #aboutBanner {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7222ff+0,4fc5fe+100 */
-  background: #7222ff;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #7222ff 0%, #4fc5fe 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #7222ff 0%, #4fc5fe 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #7222ff 0%, #4fc5fe 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7222ff', endColorstr='#4fc5fe',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
   padding: 70px 0 40px;
-  color: white;
   text-align: center;
 }
 
 #aboutBanner .title {
   text-transform: uppercase;
+}
+
+#aboutBanner .paragraph {
+  width: 90%;
+  margin: auto;
 }
 
 #aboutSection-1 {
@@ -1473,6 +1555,45 @@ ul.slick-dots button {
   outline: none;
   letter-spacing: 1px;
   font-family: ClearSansBold;
+}
+
+#aboutSection-4 {
+  text-align: center;
+  padding: 50px 0;
+  background: #e5e5e5;
+}
+
+#aboutSection-4 .section-title {
+  padding: 30px 0 10px;
+}
+
+#aboutSection-5 {
+  padding: 40px 0;
+}
+
+#aboutSection-5 .mission-module {
+  display: flex;
+  font-family: ClearSansReg;
+  align-items: center;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#aboutSection-5 .img {
+  width: 80px;
+  padding: 10px;
+  margin: auto;
+}
+
+#aboutSection-5 .img img {
+  width: 100%;
+  display: block;
+}
+
+#aboutSection-5 .text {
+  width: 80%;
+  margin: auto;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {

@@ -128,12 +128,12 @@ $('#conceptBelt').waypoint(function() {
 
     $('#conceptBelt .flex-module').each(function(i){
         $(this).css({
-            'transition': 'all .5s ease '+i/10+'s'
+            'transition': 'all .5s ease '+((i/5)+.2)+'s'
         });
     });
     $('#conceptBelt').removeClass('entry');
 
-},{offset: '70%'});
+},{offset: '80%'});
 
 $('#mainBelt').waypoint(function() {
     $('#mainBelt').removeClass('entry');
@@ -183,6 +183,15 @@ $('#clientSection-1').waypoint(function() {
     });
 },{offset: '70%'});
 
+$('#whySysad').waypoint(function() {
+    $('#whySysad').removeClass('entry');
+    $('#whySysad *').each(function(i){
+        $(this).css({
+            'transition-delay': i/20+'s'
+        })
+    });
+},{offset: '70%'});
+
 
 
 $('#indexSection-2 .flex').slick({
@@ -219,3 +228,30 @@ $('#indexSection-2 .flex').slick({
     }
   ]
 });
+
+$('#aboutBanner').waypoint(function() {
+    $('#aboutBanner').removeClass('entry');
+    $('#aboutBanner *').each(function(i){
+        $(this).css({
+            'transition-delay': i/10+'s'
+        })
+    });
+},{offset: '70%'});
+
+$('#aboutSection-4').waypoint(function() {
+    $('#aboutSection-4').removeClass('entry');
+    $('#aboutSection-4 *').each(function(i){
+        $(this).css({
+            'transition-delay': i/10+'s'
+        })
+    });
+},{offset: '70%'});
+
+$('#aboutSection-5').waypoint(function() {
+    $('#aboutSection-5').removeClass('entry');
+    $('#aboutSection-5 *').each(function(i){
+        $(this).css({
+            'transition-delay': i/15+'s'
+        })
+    });
+},{offset: '70%'});
