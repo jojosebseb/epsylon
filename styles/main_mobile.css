@@ -1385,6 +1385,7 @@ ul.slick-dots button {
   border-top: 1px solid #444;
   padding: 15px 0;
   font-size: 13px;
+  padding-right: 28vw;
 }
 
 #footer .footer-copyright .footer-flex {

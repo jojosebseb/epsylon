@@ -255,3 +255,10 @@ $('#aboutSection-5').waypoint(function() {
         })
     });
 },{offset: '70%'});
+
+$('.floating-placeholder').on('click', function(){
+    $(this).find('.place-holder').addClass('active');
+});
+$('.float-input').on('focus', function(){
+    $(this).parent().find('.place-holder').addClass('active');
+})

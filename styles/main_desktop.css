@@ -1765,3 +1765,125 @@ textarea {
   font-family: ClearSansBold;
   transition: all 1.3s ease;
 }
+
+.product-page {
+  color: white;
+  font-family: ClearSansReg;
+}
+
+.product-page .container {
+  display: flex;
+  min-height: 100vh;
+  padding: 15vh 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-page .left {
+  width: 65%;
+}
+
+.product-page .left .top {
+  display: flex;
+  align-items: center;
+}
+
+.product-page .left .top img {
+  max-width: 80px;
+}
+
+.product-page .left .top .product-name {
+  font-family: AkrobatBold;
+  font-size: 40px;
+  padding: 0 20px;
+  border-right: 1px solid white;
+  margin-right: 20px;
+}
+
+.product-page .left .top .product-caption {
+  font-size: 15px;
+}
+
+.product-page .left .middle {
+  padding: 50px 0;
+  font-size: 45px;
+  font-family: ClearSansBold;
+  line-height: 1.3;
+}
+
+.product-page .left .bottom {
+  padding-right: 27%;
+  font-size: 18px;
+}
+
+.product-page .right {
+  width: 30%;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  color: black;
+}
+
+.product-page .right .form-title {
+  font-size: 22px;
+  line-height: 1.3;
+  color: #333;
+}
+
+.product-page .right .form-title u {
+  text-decoration: underline;
+  font-family: ClearSansBold;
+}
+
+.product-page .right .form-group {
+  padding-top: 35px;
+  position: relative;
+  font-size: 16px;
+}
+
+.product-page .right .form-group .full-input {
+  outline: none;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+  font-size: 16px;
+  padding-left: 3px;
+}
+
+.product-page .right .form-group .place-holder {
+  position: absolute;
+  bottom: 6px;
+  transition: all .3s ease;
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.product-page .right .form-group .place-holder.active {
+  font-size: 10px;
+  bottom: 28px;
+}
+
+.product-page .right .captcha-dummy {
+  width: 95%;
+  padding: 35px;
+  background: #eee;
+  margin: 20px auto;
+  border: 1px solid #aaa;
+}
+
+.product-page .right .gradient-button, .product-page .right #supportBanner .request-button, #supportBanner .product-page .right .request-button {
+  width: 100%;
+  padding: 10px 0;
+  font-family: ClearSansReg;
+}
+
+#adoptPage {
+  background-image: url("../img/adopt-landing.png");
+}
+
+#cptPage {
+  background-image: url("../img/cpt-landing.png");
+}
+
+#psyPage {
+  background-image: url("../img/psy-landing.png");
+}

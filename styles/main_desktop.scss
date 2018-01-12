@@ -1563,3 +1563,107 @@ textarea{
     font-family: ClearSansBold;
     transition: all 1.3s ease;
 }
+
+
+.product-page{
+    color: white;
+
+    font-family: ClearSansReg;
+    .container{
+        display: flex;
+        min-height: 100vh;
+        padding: 15vh 0;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .left{
+        width: 65%;
+        .top{
+            display: flex;
+            align-items: center;
+            img{
+                max-width: 80px;
+            }
+            .product-name{
+                font-family: AkrobatBold;
+                font-size: 40px;
+                padding: 0 20px;
+                border-right: 1px solid white;
+                margin-right: 20px;
+            }
+            .product-caption{
+                font-size: 15px;
+            }
+        }
+        .middle{
+            padding: 50px 0;
+            font-size: 45px;
+            font-family: ClearSansBold;
+            line-height: 1.3;
+        }
+        .bottom{
+            padding-right: 27%;
+            font-size: 18px;
+        }
+    }
+    .right{
+        width: 30%;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        color: black;
+        .form-title{
+            font-size: 22px;
+            line-height: 1.3;
+            color: #333;
+            u{
+                text-decoration: underline;
+                font-family: ClearSansBold;
+            }
+        }
+        .form-group{
+            padding-top: 35px;
+            position: relative;
+            font-size: 16px;
+            .full-input{
+                outline: none;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 4px;
+                font-size: 16px;
+                padding-left: 3px;
+            }
+            .place-holder{
+                position: absolute;
+                bottom: 6px;
+                transition: all .3s ease;
+                opacity: 0.5;
+                font-size: 14px;
+            }
+            .place-holder.active{
+                font-size: 10px;
+                bottom: 28px;
+            }
+        }
+        .captcha-dummy{
+            width: 95%;
+            padding: 35px;
+            background: #eee;
+            margin: 20px auto;
+            border: 1px solid #aaa;
+        }
+        .gradient-button{
+            width: 100%;
+            padding: 10px 0;
+            font-family: ClearSansReg;
+        }
+    }
+}
+#adoptPage{
+    background-image: url('../img/adopt-landing.png');
+}
+#cptPage{
+    background-image: url('../img/cpt-landing.png');
+}
+#psyPage{
+    background-image: url('../img/psy-landing.png');
+}
